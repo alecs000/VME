@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 405209319917977424}
---- !u!114 &405209319917977424
+  - {fileID: 2885831169028545814}
+--- !u!114 &2885831169028545814
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,10 +32,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 7.69
+    value: 1.85
   threshold:
-    overrideState: 1
-    value: 5.05
+    overrideState: 0
+    value: 1
   softKnee:
     overrideState: 0
     value: 0.5
