@@ -14,3 +14,9 @@ https://maxparata.itch.io/voxelspacecolony
 https://maxparata.itch.io/darksoulsgothic-monogon
 
 https://assetstore.unity.com/packages/2d/textures-materials/roads/road-materials-137087
+
+https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-165658
+
+https://loafbrr.itch.io/simple-garbage-props
+
+https://refridgerator.itch.io/garbagebin-clean-dirty
