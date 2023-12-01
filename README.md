@@ -20,3 +20,7 @@ https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-165658
 https://loafbrr.itch.io/simple-garbage-props
 
 https://refridgerator.itch.io/garbagebin-clean-dirty
+
+https://free-game-assets.itch.io/free-desert-mountains-3d-low-poly-pack
+
+https://assetstore.unity.com/packages/3d/environments/landscapes/polydesert-107196
