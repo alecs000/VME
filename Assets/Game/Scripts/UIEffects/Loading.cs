@@ -18,13 +18,12 @@ public class Loading : MonoBehaviour
     [SerializeField] private float duration;
 
     [Header("Movement options")]
+    [SerializeField] private BezierMovement bezierMovement;
     [SerializeField] private RectTransform[] controlPoints; // Контрольные точки кривой Безье
     [SerializeField] private float durationMove; 
     [SerializeField] private Vector2 averageSize; 
     [SerializeField] private Vector2 finishSize; 
 
-    private float t = 0f; // Параметр t для интерполяции по кривой
-    private bool _isMoveBezier;
 
     private void Start()
     {
@@ -34,63 +33,19 @@ public class Loading : MonoBehaviour
         loadingSequence.onKill += StartMovement;
         loadingSequence.Play();
     }
-    void Update()
-    {
-        if (controlPoints.Length >= 2 && _isMoveBezier)
-        {
-            t += Time.deltaTime / durationMove;
-            if (t > 1f)
-            {
-                t = 1f;
-            }
-
-            Vector3 position = CalculateBezierPoint(controlPoints, t);
-            logo.BackImage.rectTransform.position = position;
-
-            if (t >= 1f)
-            {
-                // Достигнут конец кривой, можно выполнить действия по окончанию движения
-                _isMoveBezier = false;
-            }
-        }
-    }
+    
 
     private void StartMovement()
     {
         stateChanger.EnterState(nextState);
-        _isMoveBezier = true;
         Sequence movementSequence = DOTween.Sequence();
         Tween toAverageSize = logo.BackRectTransform.DOSizeDelta(averageSize, durationMove / 2);
         logo.transform.DORotate(new Vector3(0, 0,-360), durationMove+0.1f).SetRelative();
         Tween toFinishSize = logo.BackRectTransform.DOSizeDelta(finishSize, durationMove / 2);
-
         movementSequence.Append(toAverageSize); 
-        movementSequence.Append(toFinishSize); 
+        movementSequence.Append(toFinishSize);
+        bezierMovement.StartMovement(controlPoints, logo.BackRectTransform, durationMove);
     }
-    private Vector3 CalculateBezierPoint(RectTransform[] points, float t)
-    {
-        int order = points.Length - 1;
-        Vector3 point = Vector3.zero;
-
-        for (int i = 0; i < points.Length; i++)
-        {
-            float binomialCoeff = BinomialCoefficient(order, i);
-            float term = binomialCoeff * Mathf.Pow(1 - t, order - i) * Mathf.Pow(t, i);
-            point += term * points[i].position;
-        }
-
-        return point;
-    }
-
-    private float BinomialCoefficient(int n, int k)
-    {
-        float result = 1;
-        for (int i = 1; i <= k; i++)
-        {
-            result *= (n - (k - i));
-            result /= i;
-        }
-        return result;
-    }
+    
     
 }

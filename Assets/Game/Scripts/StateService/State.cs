@@ -13,8 +13,9 @@ public abstract class State : MonoBehaviour
     {
         _stateID = id;
     }
-    public async virtual Task Enter() {
+    public virtual Task Enter() {
         OnStateEnter?.Invoke(_stateID);
+        return Task.CompletedTask;
     }
     public abstract void Exit();
 }

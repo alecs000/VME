@@ -6,9 +6,8 @@ public class Bootstrap : MonoBehaviour
 {
     [SerializeField] private State welcomeState;
     [SerializeField] private StateChanger stateChanger;
-    IEnumerator Start()
+    void Start()
     {
-        yield return new WaitForSeconds(2);
         stateChanger.EnterState(welcomeState);
     }
 }
