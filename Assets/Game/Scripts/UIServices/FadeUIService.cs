@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class FadeUIService : UISwitchService
 {
-    [SerializeField] private StateChanger stateChanger;
-
     [SerializeField] private CanvasGroup group; 
     [SerializeField] private float duration; 
     public async override Task Appear()

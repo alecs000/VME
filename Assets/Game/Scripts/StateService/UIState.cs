@@ -7,12 +7,11 @@ using UnityEngine;
 public class UIState : State
 {
     [SerializeField] private UISwitchService[] uISwitchServices;
-    [SerializeField] private int amountStaticsTransforms;
     private Task[] tasks;
     public override async Task Enter()
     {
         gameObject.SetActive(true);
-        transform.SetSiblingIndex(transform.parent.childCount- amountStaticsTransforms);
+        transform.SetSiblingIndex(transform.parent.childCount- 4);
         Task[] tasks = new Task[uISwitchServices.Length];
         for (int i = 0; i < uISwitchServices.Length; i++)
         {
