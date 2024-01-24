@@ -10,23 +10,35 @@ public class Pepersonnel : UIState
     [SerializeField] private ClickablePanel clickablePanel;
     [SerializeField] private ProgressBar progressBar;
     [SerializeField] private int[] goals;
-    private int _allClicksAmount;
+    private int _clicksAmount;
     private int _curentGoalNumber;
     public async override Task Enter()
     {
+        clickablePanel.Deactivate();
         await base.Enter();
         visualNovel.StartNovel(dialogSO, OnCompleteStartDialog);
     }
     public void OnCompleteStartDialog()
     {
         clickablePanel.Click += OnClick;
+        clickablePanel.Activate();
     }
     private void OnClick()
     {
-        _allClicksAmount++;
-        if(_allClicksAmount< goals[_curentGoalNumber])
+        _clicksAmount++;
+        if(_clicksAmount < goals[_curentGoalNumber])
         {
-            progressBar.Move(_allClicksAmount / goals[_curentGoalNumber]);
+            progressBar.Move((float)_clicksAmount / goals[_curentGoalNumber]);
+        }
+        else if(_curentGoalNumber+1< goals.Length)
+        {
+            _curentGoalNumber++;
+            progressBar.Move(0);
+            _clicksAmount = 0;
+        }
+        else
+        {
+
         }
     }
 }
