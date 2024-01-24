@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class VisualNovel : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class VisualNovel : MonoBehaviour
     [SerializeField] private float disappearDuration;
     [SerializeField] private Transform logoPosotion;
     [SerializeField] private DialogUI dialogUI;
+    [SerializeField] private Image background;
     Sequence sequence;
     public void StartNovel(DialogSO dialog, UnityAction onComplete)
     {
