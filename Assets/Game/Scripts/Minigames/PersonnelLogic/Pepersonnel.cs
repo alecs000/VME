@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pepersonnel : UIState
 {
@@ -9,6 +10,8 @@ public class Pepersonnel : UIState
     [SerializeField] private DialogSO dialogSO; 
     [SerializeField] private ClickablePanel clickablePanel;
     [SerializeField] private ProgressBar progressBar;
+    [SerializeField] private Button jobsButton;
+    [SerializeField] private JobsView jobsView;
     [SerializeField] private int[] goals;
     private int _clicksAmount;
     private int _curentGoalNumber;
@@ -21,6 +24,7 @@ public class Pepersonnel : UIState
     public void OnCompleteStartDialog()
     {
         clickablePanel.Click += OnClick;
+        jobsButton.onClick.AddListener(jobsView.Activate);
         clickablePanel.Activate();
     }
     private void OnClick()
