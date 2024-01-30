@@ -24,6 +24,10 @@ public class ClickablePanel : MonoBehaviour, IPointerUpHandler
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        ClickPanel();
+    }
+    public void ClickPanel()
+    {
         Click?.Invoke();
         maximizeSequnce.Kill();
         maximizeSequnce = DOTween.Sequence();
