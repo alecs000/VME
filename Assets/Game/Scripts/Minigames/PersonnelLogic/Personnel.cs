@@ -23,6 +23,7 @@ public class Personnel : UIState
     private float _amountToAdd = 1;
     public async override Task Enter()
     {
+        transform.parent.gameObject.SetActive(true);
         clickablePanel.Deactivate();
         visualNovel.StartNovel(dialogSO, OnCompleteStartDialog);
         await base.Enter();
