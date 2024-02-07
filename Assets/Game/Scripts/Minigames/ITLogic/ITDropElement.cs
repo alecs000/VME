@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ITDropElement : MonoBehaviour
 {
+    private RectTransform _rectTransform;
+    public RectTransform RectTransform=>_rectTransform;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _rectTransform = GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
