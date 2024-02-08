@@ -9,6 +9,7 @@ public class IT : UIState
     [SerializeField] private ITDropElement[] dropElements;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private RectTransform content;
     private Dictionary<ITDragElement, ITDropElement> _itElements;
     public Dictionary<ITDragElement, ITDropElement> ITElements => _itElements;
     private int _completedItem;
@@ -19,7 +20,7 @@ public class IT : UIState
         {
             _itElements.Add(dragElements[i], dropElements[i]);
             dragElements[i].UpElement = UpElement;
-            dragElements[i].Set(sprites[i], this, canvas);
+            dragElements[i].Set(sprites[i], this, canvas, content);
         }    
     }
     private ITDropElement UpElement(ITDragElement iTDragElement, PointerEventData eventData)
