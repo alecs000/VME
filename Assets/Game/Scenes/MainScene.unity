@@ -7416,7 +7416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8221915f3d6552c4188aac6506793e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  welcomeState: {fileID: 520008041}
+  welcomeState: {fileID: 1119886040}
   stateChanger: {fileID: 1621172936}
 --- !u!4 &242345072
 Transform:
@@ -15961,7 +15961,7 @@ MonoBehaviour:
   jobsView: {fileID: 2143772278}
   peopleAmount: {fileID: 610263150}
   stateChanger: {fileID: 1621172936}
-  state: {fileID: 0}
+  state: {fileID: 520008041}
   goals:
   - 200
   - 300
@@ -21036,7 +21036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303fbc3dfb8c0ce46b621d108699fe94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextState: {fileID: 1264443630}
+  nextState: {fileID: 1246327563}
   stateChanger: {fileID: 1621172936}
   visualNovel: {fileID: 2045710331}
   dialog: {fileID: 11400000, guid: 985e218c1652ef54dac140f6e9505311, type: 2}
@@ -22605,9 +22605,9 @@ RectTransform:
   - {fileID: 1208132290}
   - {fileID: 610263148}
   - {fileID: 520008040}
+  - {fileID: 1076340809}
   - {fileID: 2134925523}
   - {fileID: 103351879}
-  - {fileID: 1076340809}
   m_Father: {fileID: 1351683186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -22873,7 +22873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2134925523
 RectTransform:
   m_ObjectHideFlags: 0

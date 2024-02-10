@@ -25,7 +25,7 @@ public class Personnel : UIState
     {
         transform.parent.gameObject.SetActive(true);
         clickablePanel.Deactivate();
-        visualNovel.StartNovel(dialogSO, OnCompleteStartDialog);
+        visualNovel.StartNovel(dialogSO, OnCompleteStartDialog, true);
         await base.Enter();
     }
     public void OnCompleteStartDialog()
@@ -56,7 +56,7 @@ public class Personnel : UIState
             progressBar.Move(0);
             _clicksAmount = 0;
             peopleAmount.Add(1);
-            jobsView.Activate();
+            // jobsView.Activate(); //Активирует jobsView, но случайныое нажатие прокачивает что-то
         }
         else
         {

@@ -13,9 +13,14 @@ public class VisualNovel : MonoBehaviour
     [SerializeField] private DialogUI dialogUI;
     [SerializeField] private Image background;
     Sequence sequence;
-    public void StartNovel(DialogSO dialog, UnityAction onComplete)
+    public void StartNovel(DialogSO dialog, UnityAction onComplete, bool autoFadeLogo = false)
     {
+        background.gameObject.SetActive(true);
         TeleportLogoToNpvelPoint();
+        if (autoFadeLogo)
+        {
+            onComplete+= ()=> logo.CanvasGroup.DOFade(0, 0.5f);
+        }
         dialogUI.ShowMessage(dialog, 0, onComplete);
 
     }
@@ -28,7 +33,10 @@ public class VisualNovel : MonoBehaviour
         sequence.SetAutoKill(false);
         if(logo.CanvasGroup.alpha ==0)
         {
-            sequence.PlayBackwards();
+            logo.transform.position = logoPosotion.position;
+            logo.CanvasGroup.DOFade(1, disappearDuration);
+            logo.BackRectTransform.transform.DOScale(1, disappearDuration);
+            logo.BackRectTransform.transform.DORotate(new Vector3(0, 0, 0), disappearDuration);
             return;
         }
         sequence.onComplete += () =>

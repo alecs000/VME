@@ -25,6 +25,7 @@ public class Logistics : State
     private Tween switchRoomTween;
     public override async Task Enter()
     {
+        gameObject.SetActive(true);
         cameraMain = Camera.main;
         await base.Enter();
         visualNovel.StartNovel(dialog, OnDialogComplete);
@@ -44,6 +45,7 @@ public class Logistics : State
             }
             else
             {
+                logo.CanvasGroup.DOFade(0, durarionUI);
                 SwitchRoomUI(true);
             }
         });
@@ -114,6 +116,7 @@ public class Logistics : State
     }
     public override void Exit()
     {
+        gameObject.SetActive(false);
     }
 
 }
