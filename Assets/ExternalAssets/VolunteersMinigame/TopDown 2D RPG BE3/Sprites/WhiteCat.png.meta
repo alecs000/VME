@@ -1,62 +1,7 @@
 fileFormatVersion: 2
-guid: 23748c298f885bf4c89671f6d30f562b
-AssetOrigin:
-  serializedVersion: 1
-  productId: 188718
-  packageName: Top-Down 2D RPG Assets Pack
-  packageVersion: 1.0
-  assetPath: Assets/TopDown 2D RPG BE3/Sprites/Player.png
-  uploadId: 417218
+guid: 105711934d7be864797a1160e5a6a1a2
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6598946016331564889
-    second: Down 0
-  - first:
-      213: -7675304248189546062
-    second: Down 1
-  - first:
-      213: -6388338761078672736
-    second: Down 2
-  - first:
-      213: -303320121775701381
-    second: Down 3
-  - first:
-      213: 7043811978007918041
-    second: Up 0
-  - first:
-      213: -7723253972256136601
-    second: Up 1
-  - first:
-      213: -1137364592071911362
-    second: Up 2
-  - first:
-      213: -3549988229105279555
-    second: Up 3
-  - first:
-      213: 2249745419088220813
-    second: Right 0
-  - first:
-      213: 5333771517180107481
-    second: Right 1
-  - first:
-      213: -646623592477257922
-    second: Right 2
-  - first:
-      213: 5856893256139009897
-    second: Right 3
-  - first:
-      213: 3729461876300729580
-    second: Left 0
-  - first:
-      213: -672529477206987394
-    second: Left 1
-  - first:
-      213: 5629586733242638167
-    second: Left 2
-  - first:
-      213: 7767812757204367948
-    second: Left 3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,40 +65,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 256
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 256
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -163,10 +82,36 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -176,10 +121,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -191,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Down 0
+      name: WhiteCat_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 51
-        width: 16
-        height: 16
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a8f3949f85db64a0800000000000000
-      internalID: -6598946016331564889
+      spriteID: a4685b7eafbab524ebb49c96c9f1cebd
+      internalID: -1890858062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Down 1
+      name: WhiteCat_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 51
-        width: 16
-        height: 16
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b19d97a377db7590800000000000000
-      internalID: -7675304248189546062
+      spriteID: 5c94d9987c8198c4db6e75ee160fa4c9
+      internalID: -1720188042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Down 2
+      name: WhiteCat_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 51
-        width: 16
-        height: 16
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,41 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a2fb016ebf0857a0800000000000000
-      internalID: -6388338761078672736
+      spriteID: 9f0d291ec4a16ca4cb3d61bd1a36e420
+      internalID: -210353036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Down 3
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 51
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b72c450d4f36acbf0800000000000000
-      internalID: -303320121775701381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Up 0
+      name: WhiteCat_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 34
-        width: 16
-        height: 16
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5bdcd9ca5a0c160800000000000000
-      internalID: 7043811978007918041
+      spriteID: a89e197a905484c47a7ce398f4d924ea
+      internalID: -1903265337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up 1
+      name: WhiteCat_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 34
-        width: 16
-        height: 16
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7626c898e6d71d490800000000000000
-      internalID: -7723253972256136601
+      spriteID: 357041c4d6df7154a92d7cc9740cc92d
+      internalID: 1256815791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up 2
+      name: WhiteCat_5
       rect:
         serializedVersion: 2
-        x: 34
-        y: 34
-        width: 16
-        height: 16
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e385275fde44730f0800000000000000
-      internalID: -1137364592071911362
+      spriteID: b33121b84aeba4042939dd13cd51b3ff
+      internalID: -439233035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Up 3
+      name: WhiteCat_6
       rect:
         serializedVersion: 2
-        x: 51
-        y: 34
-        width: 16
-        height: 16
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbd9c57a388ebbec0800000000000000
-      internalID: -3549988229105279555
+      spriteID: c883b8cb79eaf754eaf020fde21deaf7
+      internalID: -1841265405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right 0
+      name: WhiteCat_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 17
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d82d0dbf983b83f10800000000000000
-      internalID: 2249745419088220813
+      spriteID: c8079ce80696dbb458528f9cf7a7b1cd
+      internalID: 1048675018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right 1
+      name: WhiteCat_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 17
-        width: 16
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dadd927fec550a40800000000000000
-      internalID: 5333771517180107481
+      spriteID: 04a6a4861d4fd9f4782a8008f297c508
+      internalID: 548407229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right 2
+      name: WhiteCat_9
       rect:
         serializedVersion: 2
-        x: 34
-        y: 17
-        width: 16
-        height: 16
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3f8103c44bb607f0800000000000000
-      internalID: -646623592477257922
+      spriteID: 96b2acd25af3ecb48bdea35b2f6bb912
+      internalID: -1219079014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right 3
+      name: WhiteCat_10
       rect:
         serializedVersion: 2
-        x: 51
-        y: 17
-        width: 16
-        height: 16
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96feb83a26dd74150800000000000000
-      internalID: 5856893256139009897
+      spriteID: 3c485fdf1bcb2bf44aba609ab4aad1e5
+      internalID: 1118537081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left 0
+      name: WhiteCat_11
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec444421d5b1c330800000000000000
-      internalID: 3729461876300729580
+      spriteID: faea470f3bb2f954d94680ad4a3a7cd6
+      internalID: 1659233165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left 1
+      name: WhiteCat_12
       rect:
         serializedVersion: 2
-        x: 17
+        x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7d2912f002baa6f0800000000000000
-      internalID: -672529477206987394
+      spriteID: 47cbd72fe97caba43b4773cfe1c98d71
+      internalID: -2118489837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left 2
+      name: WhiteCat_13
       rect:
         serializedVersion: 2
-        x: 34
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +423,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75fdd2b9e4f402e40800000000000000
-      internalID: 5629586733242638167
+      spriteID: e50853f5417a8d94f955081c914def2d
+      internalID: 758506536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left 3
+      name: WhiteCat_14
       rect:
         serializedVersion: 2
-        x: 51
+        x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4af9ea0c80dccb60800000000000000
-      internalID: 7767812757204367948
+      spriteID: 224bb166c57d63b44a1ece282394b82a
+      internalID: 1476482224
       vertices: []
       indices: 
       edges: []
@@ -529,7 +453,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b1a9826be165c5747b2da07821c1250b
+    spriteID: 98099f3e9328027468a4d99b065e180b
     internalID: 0
     vertices: []
     indices: 
@@ -537,22 +461,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Down 0: -6598946016331564889
-      Down 1: -7675304248189546062
-      Down 2: -6388338761078672736
-      Down 3: -303320121775701381
-      Left 0: 3729461876300729580
-      Left 1: -672529477206987394
-      Left 2: 5629586733242638167
-      Left 3: 7767812757204367948
-      Right 0: 2249745419088220813
-      Right 1: 5333771517180107481
-      Right 2: -646623592477257922
-      Right 3: 5856893256139009897
-      Up 0: 7043811978007918041
-      Up 1: -7723253972256136601
-      Up 2: -1137364592071911362
-      Up 3: -3549988229105279555
+      WhiteCat_0: -1890858062
+      WhiteCat_1: -1720188042
+      WhiteCat_10: 1118537081
+      WhiteCat_11: 1659233165
+      WhiteCat_12: -2118489837
+      WhiteCat_13: 758506536
+      WhiteCat_14: 1476482224
+      WhiteCat_2: -210353036
+      WhiteCat_3: -1903265337
+      WhiteCat_4: 1256815791
+      WhiteCat_5: -439233035
+      WhiteCat_6: -1841265405
+      WhiteCat_7: 1048675018
+      WhiteCat_8: 548407229
+      WhiteCat_9: -1219079014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

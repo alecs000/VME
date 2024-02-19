@@ -17,7 +17,7 @@ public class CameraMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        Vector3 targetCamPos = new Vector3(target.position.x, 0, -1.44f) + offset;
+        Vector3 targetCamPos = new Vector3(target.position.x, target.position.y,0) + offset;
         transform.position = Vector3.Lerp(transform.position,
                                            targetCamPos,
                                            smoothing * Time.fixedDeltaTime);

@@ -5,36 +5,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody player;
+    [SerializeField] private Rigidbody2D player;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private float speed;
-    [SerializeField] private float duration;
-    private bool _isMoveInPortal;
-    private Transform _portal;
-    public void MoveInPortal(Transform portal)
+    private Vector2 diraction;
+    private void Update()
     {
-        _portal = portal;
-        _isMoveInPortal = true;
-        transform.DOMove(_portal.position, duration).OnKill(()=>Debug.Log("1"));
-        transform.DOScale(0f, duration);
-        transform.LookAt(_portal);
+        diraction = new Vector2(SimpleInput.GetAxis("Horizontal"), SimpleInput.GetAxis("Vertical"));
+        playerAnimator.SetFloat("Speed", diraction.magnitude);
+        playerAnimator.SetFloat("Hor", diraction.x);
+        playerAnimator.SetFloat("Ver", diraction.y);
     }
     private void FixedUpdate()
     {
-        if (_isMoveInPortal)
-            return;
-        Vector2 directionJoystick = new Vector2(SimpleInput.GetAxis("Vertical"), -SimpleInput.GetAxis("Horizontal"));
-        Vector3 direction = new Vector3(directionJoystick.x, 0, directionJoystick.y);
-        player.MovePosition(transform.position + direction * Time.fixedDeltaTime * speed);
-        if (direction != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 10f);
-            playerAnimator.SetBool("Run", true);
-        }
-        else
-        {
-            playerAnimator.SetBool("Run", false);
-        }
+        player.MovePosition(player.position + diraction * speed * Time.fixedDeltaTime);
     }
 }
