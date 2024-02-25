@@ -8,16 +8,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private float speed;
-    private Vector2 diraction;
+    private Vector2 direction;
     private void Update()
     {
-        diraction = new Vector2(SimpleInput.GetAxis("Horizontal"), SimpleInput.GetAxis("Vertical"));
-        playerAnimator.SetFloat("Speed", diraction.magnitude);
-        playerAnimator.SetFloat("Hor", diraction.x);
-        playerAnimator.SetFloat("Ver", diraction.y);
+        direction = new Vector2(SimpleInput.GetAxis("Horizontal"), SimpleInput.GetAxis("Vertical"));
+        playerAnimator.SetFloat("Speed", direction.magnitude);
+        playerAnimator.SetFloat("Hor", direction.x);
+        playerAnimator.SetFloat("Ver", direction.y);
     }
     private void FixedUpdate()
     {
-        player.MovePosition(player.position + diraction * speed * Time.fixedDeltaTime);
+        player.MovePosition(player.position + direction * speed * Time.fixedDeltaTime);
     }
 }
