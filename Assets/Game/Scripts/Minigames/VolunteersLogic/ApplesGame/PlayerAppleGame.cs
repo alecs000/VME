@@ -1,4 +1,5 @@
 using Codice.CM.Common;
+using log4net.Util;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerAppleGame : MonoBehaviour
     [SerializeField] private AppleGame appleGame;
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private float speed;
+    [SerializeField] private Vector2 borders;
     private Vector2 _direction;
     private void Start()
     {
@@ -29,6 +31,11 @@ public class PlayerAppleGame : MonoBehaviour
     {
         if (!left.IsClicked && !right.IsClicked)
             return;
+        if (transform.position.x < borders.x && left.IsClicked)
+            return;
+        if (transform.position.x > borders.y && right.IsClicked)
+            return;
         player.MovePosition(player.position + _direction * speed * Time.fixedDeltaTime);
+
     }
 }

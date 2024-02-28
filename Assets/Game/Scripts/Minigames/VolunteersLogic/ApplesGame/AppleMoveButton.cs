@@ -25,9 +25,5 @@ public class AppleMoveButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             Clicked?.Invoke(direction);
         }
-        else
-        {
-            Clicked?.Invoke(Vector2.zero);
-        }
     }
 }
