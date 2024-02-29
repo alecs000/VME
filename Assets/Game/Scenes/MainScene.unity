@@ -803,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &64551584
 Transform:
   m_ObjectHideFlags: 0
@@ -7892,7 +7892,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198645090}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 0.99, y: 0.99, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -8391,7 +8391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8221915f3d6552c4188aac6506793e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  welcomeState: {fileID: 64551585}
+  welcomeState: {fileID: 1119886040}
   stateChanger: {fileID: 1621172936}
 --- !u!4 &242345072
 Transform:
@@ -30942,6 +30942,11 @@ MonoBehaviour:
   visualNovel: {fileID: 2045710331}
   startDialog: {fileID: 11400000, guid: fccfe119f72de1d47b82ccff3ada3a87, type: 2}
   dialogComplete: {fileID: 11400000, guid: 45c45f631eef2dd438aead7c58bdc204, type: 2}
+  prefab: {fileID: 0}
+  count: 0
+  appleDelay: {x: 0, y: 0}
+  xRange: {x: 0, y: 0}
+  yPosition: 0
 --- !u!1 &1470793469
 GameObject:
   m_ObjectHideFlags: 0
