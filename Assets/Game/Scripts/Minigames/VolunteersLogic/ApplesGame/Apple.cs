@@ -13,6 +13,7 @@ public class Apple : MonoBehaviour
         if (collision.TryGetComponent(out PlayerAppleGame player))
         {
             player.AddApple(amount);
+            gameObject.SetActive(false);
         }
     }
     private void FixedUpdate()

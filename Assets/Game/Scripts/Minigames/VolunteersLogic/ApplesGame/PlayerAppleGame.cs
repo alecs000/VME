@@ -13,6 +13,8 @@ public class PlayerAppleGame : MonoBehaviour
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private float speed;
     [SerializeField] private Vector2 borders;
+    [SerializeField] private Animator playerAnimator;
+
     private Vector2 _direction;
     private void Start()
     {
@@ -29,8 +31,18 @@ public class PlayerAppleGame : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!left.IsClicked && !right.IsClicked)
+        if (!appleGame.IsGameStarted)
+        {
             return;
+        }
+
+        if (!left.IsClicked && !right.IsClicked)
+        {
+            playerAnimator.SetFloat("Speed", 0);
+            return;
+        }
+        playerAnimator.SetFloat("Speed", _direction.magnitude);
+        playerAnimator.SetFloat("Hor", _direction.x);
         if (transform.position.x < borders.x && left.IsClicked)
             return;
         if (transform.position.x > borders.y && right.IsClicked)
