@@ -14,6 +14,8 @@ public class AppleGame : MonoBehaviour
     [SerializeField] private Vector2 appleDelay;
     [SerializeField] private Vector2 xRange;
     [SerializeField] private float yPosition;
+    [SerializeField] private StateChanger stateChanger;
+    [SerializeField] private State nextState;
 
     [SerializeField] private AppleSpawner ordinaryAppleSpawner;
     [SerializeField] private AppleSpawner badAppleSpawner;
@@ -38,11 +40,11 @@ public class AppleGame : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(appleDelay.x, appleDelay.y));
             int appleRandom = Random.Range(0, 10);
             Apple apple;
-            if (appleRandom % 3 == 0)
+            if (appleRandom % 4 == 0)
             {
                 apple = badAppleSpawner.GetApple();
             }
-            else if(appleRandom == 8)
+            else if(appleRandom == 9)
             {
                 apple = goldAppleSpawner.GetApple();
             }
@@ -65,6 +67,6 @@ public class AppleGame : MonoBehaviour
     private void CompleteAppleGame()
     {
         IsGameStarted = false;
-        visualNovel.StartNovel(dialogComplete, StartGame, true);
+        visualNovel.StartNovel(dialogComplete,()=> stateChanger.EnterState(nextState), true);
     }
 }
