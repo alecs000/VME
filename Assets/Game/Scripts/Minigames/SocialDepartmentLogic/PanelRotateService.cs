@@ -54,8 +54,16 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             bool isMaxRotation = currentRotationAngle >= maxAngle && direction.x > 0;
             bool isMinRotation = currentRotationAngle <= -maxAngle && direction.x < 0;
 
-            if (isMaxRotation|| isMinRotation)
+            if (isMaxRotation)
+            {
+                rotatePoint.eulerAngles =new Vector3(0,0, maxAngle);
                 return;
+            }
+            else if (isMinRotation)
+            {
+                rotatePoint.eulerAngles = new Vector3(0, 0, -maxAngle);
+                return;
+            }
             bool isRightRotation = currentRotationAngle < 0;
             underImageOk.gameObject.SetActive(isRightRotation);
             underImageCansel.gameObject.SetActive(!isRightRotation);

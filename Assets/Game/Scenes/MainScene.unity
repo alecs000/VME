@@ -8701,7 +8701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8221915f3d6552c4188aac6506793e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  welcomeState: {fileID: 1820936218}
+  welcomeState: {fileID: 1264443630}
   stateChanger: {fileID: 1621172936}
 --- !u!4 &242345072
 Transform:
@@ -28532,7 +28532,7 @@ MonoBehaviour:
   underImageOk: {fileID: 1296649466}
   rotatePoint: {fileID: 1304840618}
   swipeInput: {fileID: 1264443629}
-  speed: 5
+  speed: 2
   swipeAngle: 20
   maxAngle: 25
   durationBack: 1
@@ -39517,7 +39517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820936217
 Transform:
   m_ObjectHideFlags: 0
@@ -41526,12 +41526,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1264443628}
   - {fileID: 1119886037}
   - {fileID: 868836562}
   - {fileID: 1208132290}
   - {fileID: 610263148}
   - {fileID: 520008040}
+  - {fileID: 1264443628}
   - {fileID: 1623764689}
   - {fileID: 1076340809}
   - {fileID: 2134925523}
