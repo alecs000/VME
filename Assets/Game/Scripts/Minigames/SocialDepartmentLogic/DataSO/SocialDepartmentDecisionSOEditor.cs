@@ -25,7 +25,6 @@ public class SocialDepartmentDecisionSOEditor : Editor
 
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("rewardsOk"));
-        // Check if choise is ChoiseType.Single to hide rewardsCansel
         if ((ChoiseType)choiseProperty.enumValueIndex == ChoiseType.Single)
         {
             rewardsCancelProperty.isExpanded = false;

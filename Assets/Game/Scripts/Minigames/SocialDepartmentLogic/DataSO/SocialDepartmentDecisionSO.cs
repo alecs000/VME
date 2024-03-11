@@ -22,4 +22,6 @@ public class SocialDepartmentDecisionSO : ScriptableObject
     public string Title => title;
     public string Description => description;
     public ChoiseType Choise => choise;
+    public Reward RewardOk => rewardsOk;
+    public Reward RewardsCancel => rewardsCansel;
 }

@@ -10,9 +10,15 @@ public class IT : UIState
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform content;
+    [SerializeField] private VisualNovel visualNovel;
+    [SerializeField] private DialogSO startDialog;
+    [SerializeField] private DialogSO endDialog;
+    [SerializeField] private StateChanger stateChanger;
+    [SerializeField] private State nextState;
     private Dictionary<ITDragElement, ITDropElement> _itElements;
     public Dictionary<ITDragElement, ITDropElement> ITElements => _itElements;
     private int _completedItem;
+    
     private void Start()
     {
         _itElements = new Dictionary<ITDragElement, ITDropElement>();
@@ -21,7 +27,8 @@ public class IT : UIState
             _itElements.Add(dragElements[i], dropElements[i]);
             dragElements[i].UpElement = UpElement;
             dragElements[i].Set(sprites[i], this, canvas, content);
-        }    
+        }
+        visualNovel.StartNovel(startDialog, null, true);
     }
     private ITDropElement UpElement(ITDragElement iTDragElement, PointerEventData eventData)
     {
@@ -31,9 +38,9 @@ public class IT : UIState
             if(_itElements[iTDragElement]== dropElement)
             {
                 _completedItem++;
-                if (_completedItem == sprites.Length-1)
+                if (_completedItem == sprites.Length)
                 {
-
+                    visualNovel.StartNovel(endDialog, ()=> stateChanger.EnterState(nextState), true);
                 }
 
                 return dropElement;

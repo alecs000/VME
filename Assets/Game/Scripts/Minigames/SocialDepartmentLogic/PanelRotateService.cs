@@ -21,6 +21,7 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         [SerializeField] private float maxAngle;
         [SerializeField] private float durationBack;
 
+
         private SocialDepartmentDecisionSO _currentDecisionSO;
         private Tween _rotateBackTween;
         private void Start()
@@ -28,9 +29,9 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             swipeInput.OnDrag += Rotate;
             swipeInput.OnEnd += EndRotation;
         }
-        public void InitializeNewDicision(SocialDepartmentDecisionSO decisionSO)
+        public void InitializeNewDecision()
         {
-            _currentDecisionSO = decisionSO; 
+            _rotateBackTween = rotatePoint.DORotate(Vector3.zero, durationBack/2);
         }
         private void EndRotation()
         {
@@ -41,8 +42,7 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             }
             else
             {
-                print(currentRotationAngle < 0);
-                OnEndRotation?.Invoke(currentRotationAngle <0);
+                OnEndRotation?.Invoke(currentRotationAngle >0);
             }
         }
 

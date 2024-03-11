@@ -8853,6 +8853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede4276840abff347be3ea2e64fc3046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 762451434}
 --- !u!1 &255825534
 GameObject:
   m_ObjectHideFlags: 0
@@ -17459,6 +17460,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3789237c67a70b4a8d911bc16fba0d7, type: 3}
   canvas: {fileID: 2045710329}
   content: {fileID: 1228288063}
+  visualNovel: {fileID: 2045710331}
+  startDialog: {fileID: 11400000, guid: 047f361ad7f7dcc4f909036b57a67638, type: 2}
+  endDialog: {fileID: 11400000, guid: af05079903f68994f98b166c39674210, type: 2}
+  stateChanger: {fileID: 1621172936}
+  nextState: {fileID: 1264443630}
 --- !u!1 &538709142
 GameObject:
   m_ObjectHideFlags: 0
@@ -19318,7 +19324,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -27468,6 +27474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bb678cf9bb897459187efc6759c48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 415812399}
 --- !u!1 &1215039236
 GameObject:
   m_ObjectHideFlags: 0
@@ -28421,7 +28428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1264443628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28474,10 +28481,22 @@ MonoBehaviour:
   uISwitchServices:
   - {fileID: 1264443634}
   panelRotateService: {fileID: 1264443633}
-  desisions:
+  decisions:
   - {fileID: 11400000, guid: fb6003314af47b34e9ddf9f14daa716a, type: 2}
+  - {fileID: 11400000, guid: 162777608787c7f4381199012813a579, type: 2}
+  - {fileID: 11400000, guid: 21d19d9ca7b385d4685081aa4dc9cf58, type: 2}
+  - {fileID: 11400000, guid: e55e56e04fedee84395a8aa44c2c32db, type: 2}
+  - {fileID: 11400000, guid: ec714bb02b64f5545b5b61d28275366e, type: 2}
+  - {fileID: 11400000, guid: 1296f56179d3db7459dc09ae70460b94, type: 2}
+  - {fileID: 11400000, guid: 3dc2cbf60b475234e9e883fa3e1db8e6, type: 2}
+  - {fileID: 11400000, guid: d1fe4de5c433b5d4da91c88ca8986b5b, type: 2}
   titleText: {fileID: 348413384}
   descriptionText: {fileID: 2954582}
+  coins: {fileID: 1941780757}
+  reputation: {fileID: 246488844}
+  people: {fileID: 1214085045}
+  startCoinsAmount: 50
+  startPeopleAmount: 10
 --- !u!114 &1264443631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28532,7 +28551,7 @@ MonoBehaviour:
   underImageOk: {fileID: 1296649466}
   rotatePoint: {fileID: 1304840618}
   swipeInput: {fileID: 1264443629}
-  speed: 2
+  speed: 3
   swipeAngle: 20
   maxAngle: 25
   durationBack: 1
@@ -40379,6 +40398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4dc76b08b935cb47b37aedaf35e3972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 154753207}
 --- !u!1 &1942273484
 GameObject:
   m_ObjectHideFlags: 0
@@ -41528,10 +41548,10 @@ RectTransform:
   m_Children:
   - {fileID: 1119886037}
   - {fileID: 868836562}
-  - {fileID: 1208132290}
-  - {fileID: 610263148}
   - {fileID: 520008040}
   - {fileID: 1264443628}
+  - {fileID: 610263148}
+  - {fileID: 1208132290}
   - {fileID: 1623764689}
   - {fileID: 1076340809}
   - {fileID: 2134925523}

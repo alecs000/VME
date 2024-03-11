@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
 {
-    public class Coins : BankDefault
+    public class Coins : BankWithText
     {
          
     }
