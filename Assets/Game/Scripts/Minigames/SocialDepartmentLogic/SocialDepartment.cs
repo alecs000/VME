@@ -27,7 +27,9 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
 
         [SerializeField] private StateChanger stateChanger;
         [SerializeField] private State nextState;
-        [SerializeField] private AddedAnimation addedAnimation;
+        [SerializeField] private AddedAnimation addedCoinsAnimation;
+        [SerializeField] private AddedAnimation addedPeopleAnimation;
+        [SerializeField] private AddedAnimation addedReputationAnimation;
 
         private int _id;
         private void Start()
@@ -65,11 +67,19 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         {
             if (reward.Coins != 0)
             {
-
+                addedCoinsAnimation.Show(reward.Coins);
                 coins.Add(reward.Coins);
             }
-            reputation.Add(reward.Reputation);
-            people.Add(reward.PeopleAmount);
+            if (reward.Reputation != 0)
+            {
+                addedReputationAnimation.Show(reward.Reputation);
+                reputation.Add(reward.Reputation);
+            }
+            if (reward.PeopleAmount != 0)
+            {
+                addedPeopleAnimation.Show(reward.PeopleAmount);
+                people.Add(reward.PeopleAmount);
+            }
         }
         public async override Task Enter()
         {

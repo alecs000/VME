@@ -18,7 +18,8 @@ public class AddedAnimation : MonoBehaviour
         gameObject.SetActive(true);
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, startPosition);
 
-        text.text = $"+{amount}";
+        string sign = amount > 0 ? "+" : "";
+        text.text = $"{sign}{amount}";
         canvasGroup.DOFade(1, duration/2);
         rectTransform.DOAnchorPosY(endPosition, duration);
         canvasGroup.DOFade(0, duration / 2).SetDelay(duration);

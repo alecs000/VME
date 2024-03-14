@@ -15,6 +15,5 @@ public class GradientBackgroundMovement : MonoBehaviour
         sequence.Append(rectTransform.DOAnchorPos(maxPosition, duration));
         sequence.Append(rectTransform.DOAnchorPos(minPosition, duration));
         sequence.SetLoops(duration - 1);
-        sequence.SetEase(Ease.InBounce);
     }
 }
