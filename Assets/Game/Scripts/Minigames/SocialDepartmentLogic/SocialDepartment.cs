@@ -37,6 +37,7 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             panelRotateService.OnEndRotation += DoDecision;
             coins.Add(startCoinsAmount);
             people.Add(startPeopleAmount);
+            visualNovel.StartNovel(startDialog, null, true);
         }
         private void DoDecision(bool result)
         {
