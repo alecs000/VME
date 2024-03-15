@@ -89,8 +89,9 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         }
         private void StartMiniGame()
         {
-            ShowDecision(0);
+            _id = 0;            ShowDecision(0);
             panelRotateService.InitializeNewDecision();
+            //coins.Value = 50;
         }
         private void ShowDecision(int decisionId)
         {
