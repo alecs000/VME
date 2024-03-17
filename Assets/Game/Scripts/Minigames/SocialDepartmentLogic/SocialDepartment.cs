@@ -9,6 +9,9 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
 {
     public class SocialDepartment : UIState
     {
+        [SerializeField] private int startCoinsValue;
+        [SerializeField] private int startPeopleValue;
+        [SerializeField] private int startReputationValue;
         [SerializeField] private PanelRotateService panelRotateService;
         [SerializeField] private SocialDepartmentDecisionSO[] decisions;
         [SerializeField] private TMP_Text titleText;
@@ -31,13 +34,14 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         [SerializeField] private AddedAnimation addedPeopleAnimation;
         [SerializeField] private AddedAnimation addedReputationAnimation;
 
+
         private int _id;
         private void Start()
         {
             panelRotateService.OnEndRotation += DoDecision;
             coins.Add(startCoinsAmount);
             people.Add(startPeopleAmount);
-            visualNovel.StartNovel(startDialog, null, true);
+            visualNovel.StartNovel(startDialog, StartMiniGame, true);
         }
         private void DoDecision(bool result)
         {
@@ -57,7 +61,7 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             }
             else if(_id >= decisions.Length)
             {
-                visualNovel.StartNovel(winDialog,()=> stateChanger.EnterState(nextState), true);
+                visualNovel.StartNovel(winDialog,()=> stateChanger.EnterState(nextState));
                 panelRotateService.Stop();
                 return;
             }
@@ -84,14 +88,16 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         }
         public async override Task Enter()
         {
-            StartMiniGame();
             await base.Enter();
         }
         private void StartMiniGame()
         {
-            _id = 0;            ShowDecision(0);
+            _id = 0;           
+            ShowDecision(0);
             panelRotateService.InitializeNewDecision();
-            //coins.Value = 50;
+            coins.SetValue(startCoinsValue);
+            people.SetValue(startPeopleAmount);
+            reputation.SetValue(startReputationValue);
         }
         private void ShowDecision(int decisionId)
         {

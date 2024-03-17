@@ -20,4 +20,9 @@ public class BankWithText : BankDefault
         }
         return isRemoved;
     }
+    public void SetValue(int value)
+    {
+        _bankValue.Value = value;
+            text.text = Value.ToString();
+    }
 }

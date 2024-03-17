@@ -40,7 +40,7 @@ public class IT : UIState
                 _completedItem++;
                 if (_completedItem == sprites.Length)
                 {
-                    visualNovel.StartNovel(endDialog, ()=> stateChanger.EnterState(nextState), true);
+                    visualNovel.StartNovel(endDialog, ()=> stateChanger.EnterState(nextState));
                 }
 
                 return dropElement;

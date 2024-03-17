@@ -16,16 +16,17 @@ public class VisualNovel : MonoBehaviour
     public void StartNovel(DialogSO dialog, UnityAction onComplete, bool autoFadeLogo = false)
     {
         background.gameObject.SetActive(true);
-        TeleportLogoToNpvelPoint();
+        TeleportLogoToNovelPoint();
         if (autoFadeLogo)
         {
-            onComplete+= ()=> logo.CanvasGroup.DOFade(0, 0.5f);
+            onComplete+= ()=> logo.CanvasGroup.DOFade(0, 0.5f).OnKill(()=> logo.gameObject.SetActive(false));
         }
         dialogUI.ShowMessage(dialog, 0, onComplete);
 
     }
-    private void TeleportLogoToNpvelPoint()
+    private void TeleportLogoToNovelPoint()
     {
+        logo.gameObject.SetActive(true);
         sequence = DOTween.Sequence();
         sequence.Append(logo.CanvasGroup.DOFade(0, disappearDuration));
         sequence.Join(logo.BackRectTransform.transform.DORotate(new Vector3(0, 0, 90), disappearDuration));
@@ -33,6 +34,7 @@ public class VisualNovel : MonoBehaviour
         sequence.SetAutoKill(false);
         if(logo.CanvasGroup.alpha ==0)
         {
+            sequence.Kill();
             logo.transform.position = logoPosotion.position;
             logo.CanvasGroup.DOFade(1, disappearDuration);
             logo.BackRectTransform.transform.DOScale(1, disappearDuration);

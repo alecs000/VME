@@ -38,4 +38,6 @@ public abstract class BankDefault : MonoBehaviour
     {
         _bankValue.OnChanged -= @delegate;
     }
+
+
 }
