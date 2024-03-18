@@ -19,15 +19,15 @@ public class UIState : State
         }
         await Task.WhenAll(tasks);
         await base.Enter();
-
+        gameObject.SetActive(true);
     }
 
     public override void Exit()
     {
+        gameObject.SetActive(false);
         foreach (var service in uISwitchServices)
         {
             service.Disappear();
         }
-        gameObject.SetActive(false);
     }
 }

@@ -483,7 +483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9172524}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20858284}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68838681}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -17113,7 +17113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450163553}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -18038,6 +18038,7 @@ MonoBehaviour:
   - {fileID: 313007253}
   - {fileID: 2143409427}
   - {fileID: 23357581}
+  autoClickDelay: 0.3
 --- !u!114 &610263150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18733,7 +18734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687360806}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -23662,7 +23663,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813188013}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -24471,7 +24472,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892397975}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -25662,7 +25663,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076340808}
   m_Enabled: 1
-  m_Alpha: 0.23
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -26084,7 +26085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141569091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -28071,7 +28072,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231498998}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -28679,6 +28680,8 @@ MonoBehaviour:
   startDialog: {fileID: 11400000, guid: 3d7a5ac4342139541a2c8c71e185bd0e, type: 2}
   loseMoneyDialog: {fileID: 11400000, guid: 59369b1bdf606fe428e2094b2be361d7, type: 2}
   losePeopleDialog: {fileID: 11400000, guid: 3e9bd3bba86557b4cadd53aad44e6730, type: 2}
+  loseReputationDialog: {fileID: 11400000, guid: 07f86af0f96be3a4ea5b7ccdda33ebb9,
+    type: 2}
   winDialog: {fileID: 11400000, guid: 8449bd7ee91008247aeaaa6037ad052a, type: 2}
   stateChanger: {fileID: 1621172936}
   nextState: {fileID: 520008041}
@@ -28739,7 +28742,7 @@ MonoBehaviour:
   underImageOk: {fileID: 1296649466}
   rotatePoint: {fileID: 1304840618}
   swipeInput: {fileID: 1264443629}
-  speed: 3
+  speed: 4
   swipeAngle: 20
   maxAngle: 25
   durationBack: 1
@@ -30361,7 +30364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000078678, y: 120.71}
+  m_AnchoredPosition: {x: 0.0000078678, y: 94}
   m_SizeDelta: {x: 720.212, y: 303.913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431973615
@@ -30385,8 +30388,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u042D\u0442\u043E \u043C\u0438\u043D\u0438\u0438\u0433\u0440\u0430 \u043E\u043B\u0438\u0446\u0438\u0442\u0432\u043E\u0440\u044F\u0435\u0442
-    \u0441\u043E\u0431\u043E\u0439 \u0434\u0435\u043F\u0430\u0440\u0442\u0430\u043C\u0435\u043D\u0442
-    \u043B\u043E\u0433\u0438\u0441\u0442\u0438\u043A\u0438"
+    \u0441\u043E\u0431\u043E\u0439 \u0434\u0435\u043F\u0430\u0440\u0442\u0430\u043C\u0435\u043D\u0442 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50fad715181a8d24b8328648b59193ce, type: 2}
   m_sharedMaterial: {fileID: 5945857863520338523, guid: 50fad715181a8d24b8328648b59193ce,
@@ -37628,6 +37630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2136309484}
   smoothing: 5
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1583080157
 GameObject:
   m_ObjectHideFlags: 0
@@ -38499,7 +38502,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656236437}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -40016,7 +40019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303fbc3dfb8c0ce46b621d108699fe94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextState: {fileID: 1246327563}
+  nextState: {fileID: 64551585}
   stateChanger: {fileID: 1621172936}
   visualNovel: {fileID: 2045710331}
   dialog: {fileID: 11400000, guid: 985e218c1652ef54dac140f6e9505311, type: 2}
@@ -42890,7 +42893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

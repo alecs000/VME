@@ -33,6 +33,8 @@ public class IT : UIState
     private ITDropElement UpElement(ITDragElement iTDragElement, PointerEventData eventData)
     {
         GameObject clickedObject = eventData.pointerCurrentRaycast.gameObject;
+        if(clickedObject == null)
+            return null;
         if(clickedObject.TryGetComponent(out ITDropElement dropElement))
         {
             if(_itElements[iTDragElement]== dropElement)

@@ -28,6 +28,11 @@ public class Personnel : UIState
         visualNovel.StartNovel(dialogSO, OnCompleteStartDialog, true);
         await base.Enter();
     }
+    public override void Exit()
+    {
+        base.Exit();
+        transform.parent.gameObject.SetActive(false);
+    }
     public void OnCompleteStartDialog()
     {
         clickablePanel.Click += OnClick;

@@ -7,8 +7,8 @@ public class StateChanger : MonoBehaviour
     private State _currentState;
     public async void EnterState(State newState)
     {
-        await newState.Enter();
         _currentState?.Exit();
+        await newState.Enter();
         _currentState = newState;
     }
 }

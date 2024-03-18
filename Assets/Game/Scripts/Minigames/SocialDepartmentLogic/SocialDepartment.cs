@@ -26,6 +26,7 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         [SerializeField] private DialogSO startDialog;
         [SerializeField] private DialogSO loseMoneyDialog;
         [SerializeField] private DialogSO losePeopleDialog;
+        [SerializeField] private DialogSO loseReputationDialog;
         [SerializeField] private DialogSO winDialog;
 
         [SerializeField] private StateChanger stateChanger;
@@ -57,6 +58,11 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             else if(people.Value < 0)
             {
                 visualNovel.StartNovel(losePeopleDialog, StartMiniGame, true);
+                panelRotateService.Stop();
+            }
+            else if(reputation.Value < 0)
+            {
+                visualNovel.StartNovel(loseReputationDialog, StartMiniGame, true);
                 panelRotateService.Stop();
             }
             else if(_id >= decisions.Length)

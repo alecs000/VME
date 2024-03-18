@@ -14,6 +14,7 @@ public abstract class State : MonoBehaviour
         _stateID = id;
     }
     public virtual Task Enter() {
+        print("Enter "+ gameObject.name);
         OnStateEnter?.Invoke(_stateID);
         return Task.CompletedTask;
     }

@@ -8,6 +8,7 @@ public class ClickerUpgrader : MonoBehaviour
     [SerializeField] private ClickablePanel clickablePanel;
     [SerializeField] private PeopleAmount peopleAmount;
     [SerializeField] private Button[] upgradeButtons;
+    [SerializeField] private float autoClickDelay;
     private void Start()
     {
         upgradeButtons[0].onClick.AddListener(UpgradeAutoClick);
@@ -26,7 +27,7 @@ public class ClickerUpgrader : MonoBehaviour
     {
         while (!personnel.IsFinished)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(autoClickDelay);
             clickablePanel.ClickPanel();
         }
     }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform target;
-    public float smoothing = 5f;
-    Vector3 offset;
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothing = 5f;
+   [SerializeField] private Vector3 offset;
 
     void Start()
     {
