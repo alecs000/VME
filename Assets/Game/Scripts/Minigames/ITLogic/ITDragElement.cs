@@ -52,6 +52,7 @@ public class ITDragElement : MonoBehaviour, IPointerDownHandler, IDragHandler, I
             _transformToDrag.DOSizeDelta(_startSize, duration);
             return;
         }
+        dropElement.transform.SetSiblingIndex(dropElement.transform.parent.childCount-1);
         _transformToDrag.SetParent(dropElement.transform);
         _transformToDrag.DOAnchorPos(Vector2.zero, duration);
         element.gameObject.SetActive(false);

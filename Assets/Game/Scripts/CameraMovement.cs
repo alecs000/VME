@@ -8,12 +8,6 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float smoothing = 5f;
    [SerializeField] private Vector3 offset;
 
-    void Start()
-    {
-        // Calculate the initial offset.
-        offset = transform.position - target.position;
-    }
-
     void FixedUpdate()
     {
 
