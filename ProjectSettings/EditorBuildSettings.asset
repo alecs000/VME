@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game/Scenes/Cosmos.unity
-    guid: ec76e554e55185a45bcf5eda8cd7d33a
+    path: Assets/Game/Scenes/MainScene.unity
+    guid: f8cb3ad8fb5bb8f4a883656a36b48625
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

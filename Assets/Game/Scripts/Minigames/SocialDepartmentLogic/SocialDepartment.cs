@@ -42,7 +42,6 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
             panelRotateService.OnEndRotation += DoDecision;
             coins.Add(startCoinsAmount);
             people.Add(startPeopleAmount);
-            visualNovel.StartNovel(startDialog, StartMiniGame, true);
         }
         private void DoDecision(bool result)
         {
@@ -94,7 +93,11 @@ namespace Assets.Game.Scripts.Minigames.SocialDepartmentLogic
         }
         public async override Task Enter()
         {
-            await base.Enter();
+            base.Enter();
+            panelRotateService.Stop();
+            visualNovel.StartNovel(loseMoneyDialog, StartMiniGame, true);
+            titleText.text = "";
+            descriptionText.text = "";
         }
         private void StartMiniGame()
         {

@@ -18,13 +18,18 @@ public class Personnel : UIState
     [SerializeField] private StateChanger stateChanger; 
     [SerializeField] private State state;
     [SerializeField] private float[] goals;
+    [SerializeField] private DialogSO endDialogSO;
+    [SerializeField] private ClickerUpgrader clickerUpgrader;
+
     private float _clicksAmount;
     private int _curentGoalNumber;
     private float _amountToAdd = 1;
+    private bool  _isFirstTime = true;
     public async override Task Enter()
     {
         transform.parent.gameObject.SetActive(true);
         clickablePanel.Deactivate();
+        ResetPersonnelGame();
         visualNovel.StartNovel(dialogSO, OnCompleteStartDialog, true);
         await base.Enter();
     }
@@ -35,8 +40,13 @@ public class Personnel : UIState
     }
     public void OnCompleteStartDialog()
     {
-        clickablePanel.Click += OnClick;
-        jobsButton.onClick.AddListener(jobsView.Activate);
+        if (_isFirstTime)
+        {
+
+            clickablePanel.Click += OnClick;
+            jobsButton.onClick.AddListener(jobsView.Activate);
+            _isFirstTime = false;
+        }
         clickablePanel.Activate();
     }
     public void UpgradeAmountToAdd()
@@ -45,12 +55,17 @@ public class Personnel : UIState
     }
     public void UpgradeHundred()
     {
+
         _clicksAmount += 100;
         OnClick();
     }
     private void OnClick()
     {
-        _clicksAmount+= _amountToAdd;
+        if (IsFinished)
+        {
+            return;
+        }
+        _clicksAmount += _amountToAdd;
         if(_clicksAmount < goals[_curentGoalNumber])
         {
             progressBar.Move((float)_clicksAmount / goals[_curentGoalNumber]);
@@ -66,8 +81,16 @@ public class Personnel : UIState
         else
         {
             IsFinished = true;
-            stateChanger.EnterState(state);
+            visualNovel.StartNovel(endDialogSO, ()=> stateChanger.EnterState(state), true);
         }
     }
-
+    public void ResetPersonnelGame()
+    {
+        _amountToAdd = 1;
+        _clicksAmount = 0;
+        _curentGoalNumber = 0;
+        progressBar.Move(0);
+        IsFinished = false;
+        clickerUpgrader.ResetUpgrades();
+    }
 }

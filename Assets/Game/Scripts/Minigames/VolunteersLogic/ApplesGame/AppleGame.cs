@@ -24,18 +24,23 @@ public class AppleGame : MonoBehaviour
 
     private int _applesCollected;
 
-    private void Start()
-    {
-        visualNovel.StartNovel(startDialog, StartGame, true);
-    }
     private void StartGame()
     {
         IsGameStarted = true;
         StartCoroutine(Spawn());
     }
+    public void OnEnable()
+    {
+        IsGameStarted = false;
+        _applesCollected = 0;
+        gameObject.SetActive(true);
+        appleText.text = _applesCollected.ToString();
+        visualNovel.StartNovel(startDialog, StartGame, true);
+
+    }
     private IEnumerator Spawn()
     {
-        while (true)
+        while (IsGameStarted)
         {
             yield return new WaitForSeconds(Random.Range(appleDelay.x, appleDelay.y));
             int appleRandom = Random.Range(0, 10);
@@ -57,6 +62,8 @@ public class AppleGame : MonoBehaviour
     }
     public void AddApple(int amount)
     {
+        if (!IsGameStarted)
+            return;
         _applesCollected += amount;
         appleText.text = _applesCollected.ToString();
         if (_applesCollected >= goal)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,15 +19,18 @@ public class IT : UIState
     private Dictionary<ITDragElement, ITDropElement> _itElements;
     public Dictionary<ITDragElement, ITDropElement> ITElements => _itElements;
     private int _completedItem;
-    
-    private void Start()
+
+    public override async Task Enter()
     {
+        _completedItem = 0;
+       await base.Enter();
         _itElements = new Dictionary<ITDragElement, ITDropElement>();
         for (int i = 0; i < dragElements.Length; i++)
         {
             _itElements.Add(dragElements[i], dropElements[i]);
             dragElements[i].UpElement = UpElement;
             dragElements[i].Set(sprites[i], this, canvas, content);
+            dragElements[i].ResetItem();
         }
         visualNovel.StartNovel(startDialog, null, true);
     }

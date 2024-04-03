@@ -11,14 +11,5 @@ public class Logo : MonoBehaviour
     [SerializeField] private RectTransform backRectTransform;
     public Image BackImage=>backImage;
     public CanvasGroup CanvasGroup => canvasGroup;
-
-
-
-
-
-
-
     public RectTransform BackRectTransform =>backRectTransform;
-
-   
 }

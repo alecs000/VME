@@ -25,19 +25,18 @@ public class Logistics : State
     private Tween switchRoomTween;
     private void Awake()
     {
-        gameObject.SetActive(true);
-        cameraMain = Camera.main;
-        visualNovel.StartNovel(dialog, OnDialogComplete);
         roomsUI.RightArrow.onClick.AddListener(OnRightArrowClick);
         roomsUI.LeftArrow.onClick.AddListener(OnLeftArrowClick);
         roomsUI.ChooseButton.onClick.AddListener(OnChooseButtonClick);
-        _currentRoomID = 0;
     }
     public override async Task Enter()
     {
+        cameraMain = Camera.main;
+        cameraMain.transform.position = cameraOffset;
+        _currentRoomID = 0;
+        visualNovel.StartNovel(dialog, OnDialogComplete);
         gameObject.SetActive(true);
         await base.Enter();
-        gameObject.SetActive(true);
     }
     private void OnChooseButtonClick()
     {

@@ -13,22 +13,28 @@ public class ITDragElement : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 
     private Vector2 _startPosition;
     private Vector2 _startSize;
+    private Vector2 _startContentSize;
+    private Vector2 _startContentPosition;
     private RectTransform _transformToDrag;
     private RectTransform _content;
     private IT _it;
     private Canvas _canvas;
-    private void Start()
-    {
-        _transformToDrag = imageToDrag.rectTransform;
-        _startPosition = _transformToDrag.anchoredPosition;
-        _startSize = _transformToDrag.sizeDelta;
-    }
+    private bool _isFirstTime = true;
     public void Set(Sprite sprite, IT it, Canvas canvas, RectTransform content)
     {
         imageToDrag.sprite = sprite;
         _it = it;
         _canvas = canvas;
         _content = content;
+        if (_isFirstTime)
+        {
+            _transformToDrag = imageToDrag.rectTransform;
+            _startPosition = _transformToDrag.anchoredPosition;
+            _startSize = _transformToDrag.sizeDelta;
+            _startContentSize = _content.sizeDelta;
+            _startContentPosition = _content.anchoredPosition;
+            _isFirstTime = false;
+        }
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -57,5 +63,14 @@ public class ITDragElement : MonoBehaviour, IPointerDownHandler, IDragHandler, I
         _transformToDrag.DOAnchorPos(Vector2.zero, duration);
         element.gameObject.SetActive(false);
         _content.sizeDelta = new Vector2(_content.sizeDelta.x - element.sizeDelta.x, _content.sizeDelta.y);
+    }
+    public void ResetItem()
+    {
+        element.gameObject.SetActive(true);
+        _content.sizeDelta = _startContentSize;
+        _transformToDrag.SetParent(this.transform);
+        _transformToDrag.anchoredPosition = _startPosition;
+        _transformToDrag.sizeDelta = _startSize;
+        _content.anchoredPosition = _startContentPosition;
     }
 }

@@ -47,4 +47,11 @@ public class ClickerUpgrader : MonoBehaviour
             upgradeButtons[2].interactable = false;
         }
     }
+    public void ResetUpgrades()
+    {
+        upgradeButtons[0].interactable = true;
+        upgradeButtons[1].interactable = true;
+        upgradeButtons[2].interactable = true;
+        peopleAmount.SetValue(0);
+    }
 }

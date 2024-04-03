@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
 {
-    [SerializeField] private State welcomeState;
+    [SerializeField] private State initialState;
     [SerializeField] private StateChanger stateChanger;
     void Start()
     {
-        stateChanger.EnterState(welcomeState);
+        stateChanger.EnterState(initialState);
     }
 }

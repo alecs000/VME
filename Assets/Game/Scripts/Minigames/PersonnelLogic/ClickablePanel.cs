@@ -13,6 +13,7 @@ public class ClickablePanel : MonoBehaviour, IPointerUpHandler
     [SerializeField] private float maxScale;
     [SerializeField] private float duration;
     [SerializeField] private Button button;
+    [SerializeField] private Personnel Personnel;
     private Sequence maximizeSequnce;
     public void Activate()
     {
@@ -24,6 +25,10 @@ public class ClickablePanel : MonoBehaviour, IPointerUpHandler
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (Personnel.IsFinished)
+        {
+            return;
+        }
         ClickPanel();
     }
     public void ClickPanel()
